@@ -23,9 +23,13 @@ export default function Home() {
               Olá, meu nome é Felipe Bueno, como desenvolvedor FullStack minha
               paixão é transformar ideias em soluções web performáticas e
               escaláveis. Estou sempre procurando maneiras de desenvolver
-              soluções inovadoras e eficientes. Convido você a explorar meus
-              últimos projetos, onde demonstro minha capacidade em
-              desenvolvimento web e apresento soluções que desenvolvi.
+              soluções inovadoras e eficientes. Convido você a explorar meus{" "}
+              <Link href="/projects" className="underline">
+                {" "}
+                últimos projetos
+              </Link>
+              , onde demonstro minha capacidade em desenvolvimento web e
+              apresento soluções que desenvolvi.
             </p>
             <div className="flex items-center self-start mt-2">
               <Link
