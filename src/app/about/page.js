@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import profilePic from "../../../public/images/profile/developer-pic-2.jpeg";
+import Skills from "@/components/Skills";
 
 const about = () => {
   return (
@@ -54,6 +55,7 @@ const about = () => {
               </p>
             </div>
             <div className="col-span-4 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePic}
                 alt="Felipe Bueno"
@@ -61,6 +63,7 @@ const about = () => {
               />
             </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
