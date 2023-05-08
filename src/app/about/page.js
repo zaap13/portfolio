@@ -15,7 +15,7 @@ const about = () => {
             text="Olá, eu sou o Felipe Bueno, um Desenvolvedor web FullStack"
           />
           <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-4 flex flex-col items-start justify-start">
+            <div className="col-span-4 flex flex-col items-start justify-start text-dark">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biografia
               </h2>
