@@ -13,7 +13,7 @@ const Logo = () => {
         whileHover={{
           scale: 1.03,
           backgroundColor: [
-            "#121212",
+            "#cecece",
             "rgba(131,58,180,1)",
             "rgba(253,29,29,1)",
             "rgba(252,176,69,1)",
