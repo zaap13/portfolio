@@ -20,38 +20,49 @@ const about = () => {
                 Biografia
               </h2>
               <p className="font-medium">
-                Com uma paixão pela inovação e soluções criativas, comecei minha
-                jornada no desenvolvimento de software ao estudar engenharia de
-                software na Universidade Tecnológica Federal do Paraná. Lá,
-                desenvolvi uma fortíssima base em programação e aprendi sobre
-                teoria da computação, metodologias ágeis e diferentes paradigmas
-                de programação, além de fazer parte do diretório acadêmico de
-                computação como diretor de eventos externos, onde tive a
-                oportunidade de organizar diversas visitas técnicas em empresas
-                locais e liderar caravanas para os maiores eventos de tecnologia
-                do país como Campus Party Brasil e Latinoware.
+                Com uma paixão pela inovação e soluções criativas, iniciei minha
+                jornada no desenvolvimento de software enquanto cursava
+                Engenharia de Software na Universidade Tecnológica Federal do
+                Paraná. Durante esse período, desenvolvi uma sólida base em
+                programação, explorei a teoria da computação e adquiri
+                conhecimento em metodologias ágeis e diversos paradigmas de
+                programação. Também exerci a função de diretor de eventos
+                externos no diretório acadêmico de computação, liderando a
+                organização de visitas técnicas em empresas locais e conduzindo
+                caravanas para os principais eventos de tecnologia do país, como
+                a Campus Party Brasil e a Latinoware.
               </p>
               <p className="font-medium my-4">
-                Posteriormente, decidi me dedicar ao desenvolvimento web
-                fullstack na Driven Education, onde aprimorei minhas habilidades
+                Posteriormente, concentrei meus esforços no aprimoramento das
+                minhas habilidades em desenvolvimento web fullstack na Driven
+                Education. Durante este período intensivo, adquiri proficiência
                 em JavaScript/TypeScript, React.js, Node.js e outras tecnologias
-                relevantes. Durante o curso, desenvolvi um projeto que uniu
-                minha paixão por programação com xadrez, o MoveMentor, uma
-                plataforma de cursos de xadrez interativos. Fiquei honrado em
-                receber feedbacks incríveis dos principais representantes do
-                xadrez no Brasil.
+                relevantes para o mercado atual. Foi durante este período que
+                tive a oportunidade de fundir minha paixão pela programação com
+                o xadrez, resultando no desenvolvimento do MoveMentor, uma
+                plataforma de cursos de xadrez interativos.
+              </p>
+              <p className="font-medium my-4">
+                Essa experiência abriu portas para minha colaboração no projeto
+                do aplicativo de ensino de xadrez XB PRO, em parceria com o
+                renomado canal de xadrez brasileiro Xadrez Brasil. Sob a
+                orientação de Rafael Leite, idealizador do projeto, assumi a
+                responsabilidade integral pelo desenvolvimento da plataforma,
+                desde a fase de implementação até a entrega final. Minha
+                dedicação resultou em um aplicativo funcional e de sucesso, que
+                continua a receber feedbacks extremamente positivos e se mantém
+                ativo até hoje.
               </p>
               <p className="font-medium">
-                Estou ansioso para iniciar minha carreira como desenvolvedor e
-                contribuir para projetos impactantes. Com minha paixão por
-                tecnologia e soluções criativas, acredito que posso agregar
-                muito valor a qualquer equipe que eu faça parte. Sou uma pessoa
-                dedicada, sempre disposta a aprender e crescer
-                profissionalmente. Convido você a visitar minha{" "}
+                Estou ansioso para avançar em minha carreira como desenvolvedor,
+                aplicando minha paixão pela tecnologia e habilidades criativas
+                para contribuir com projetos de impacto. Sou um profissional
+                dedicado, sempre em busca de aprendizado e crescimento. Convido
+                você a explorar minha{" "}
                 <Link className="underline" href="/projects">
                   página de projetos
                 </Link>{" "}
-                para saber mais sobre meu trabalho.
+                para conhecer mais sobre meu trabalho e experiências recentes.
               </p>
             </div>
             <div className="col-span-4 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
