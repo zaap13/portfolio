@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-    // --- Configurações de Boas Práticas ---
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,24 +18,13 @@
     "strict": true,
     "moduleResolution": "node",
     "jsx": "preserve",
-    // --- A CORREÇÃO PRINCIPAL ESTÁ AQUI ---
-    // Define o diretório base como a raiz do projeto.
+
     "baseUrl": ".",
-    // Define o atalho '@/' para apontar para a pasta './src/'.
-    // Agora o Next.js saberá que `@/components` significa `src/components`.
+
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
