@@ -1,5 +1,5 @@
 'use client'
-import { CircularText, Wpp } from "./Icons";
+import { CircularText, Wpp } from "@/components/ui/Icons";
 import Link from "next/link";
 
 const HireMe = () => {
