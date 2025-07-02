@@ -27,14 +27,13 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
           <NavBar />
-          <main>
-            <div className="w-full max-w-7xl mx-auto px-8  mt-32">
-              {children}
-            </div>
+          <main className="flex items-center text-dark w-full min-h-screen">
+            {children}
           </main>
           <Footer />
         </ThemeProvider>
