@@ -11,7 +11,7 @@ export default function Home() {
     // ALTERAÇÃO 1: A cor do texto da seção agora reage ao tema
     <section className="flex flex-col items-center text-light dark:text-dark w-full min-h-screen">
       <div className="flex items-center justify-between w-full">
-        <div className="w-1/2">
+        <div className="w-1/2 mr-8">
           <Image
             src="/images/profile/developer-pic-1.png"
             alt="Felipe Bueno, Desenvolvedor"
@@ -21,7 +21,8 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="w-1/2 flex flex-col items-center self-center">
+        
+        <div className="w-[45%] flex flex-col items-center self-center px-4">
           <AnimatedText
             text="Construindo soluções web de ponta a ponta."
             className="!text-6xl !text-left"
@@ -39,7 +40,7 @@ export default function Home() {
           </p>
           <div className="flex items-center self-start mt-2">
             <a
-              href="/Felipe Bueno - CV.pdf"
+              href="/Felipe Bueno - Currículo.pdf"
               target="_blank"
               // ALTERAÇÃO 2: O botão de CV agora reage ao tema e ao hover em ambos os temas
               className="flex items-center

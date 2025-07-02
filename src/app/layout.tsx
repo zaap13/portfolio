@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google"; // Apenas Montserrat é importada
-import { ThemeProvider } from "@/components/theme-provider";
+import { Montserrat } from "next/font/google";
 import NavBar from "@/components/layout/NavBar";
+import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/layout/Footer";
 
-// Carregamos a Montserrat e definimos a variável CSS
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -31,7 +31,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          <main className="p-8 sm:p-16 lg:p-32">{children}</main>
+          <main>
+            <div className="w-full max-w-7xl mx-auto px-8  mt-32">
+              {children}
+            </div>
+          </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

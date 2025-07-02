@@ -19,7 +19,7 @@ const ExperienceStats = () => {
         <div className="flex flex-col items-end justify-between space-y-16">
             <StatItem value={2} label="Anos de Experiência" />
             <StatItem value={20} label="Tecnologias na Stack" />
-            <StatItem value={999} label="Copos de café" />
+            <StatItem value={9999} label="Copos de café" />
         </div>
     );
 };
