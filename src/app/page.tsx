@@ -11,7 +11,7 @@ export default function Home() {
     // ALTERAÇÃO 1: A cor do texto da seção agora reage ao tema
     <section className="flex flex-col items-center text-light dark:text-dark w-full min-h-screen">
       <div className="flex items-center justify-between w-full">
-        <div className="w-1/2 mr-8">
+        <div className="w-[52%] mr-8">
           <Image
             src="/images/profile/developer-pic-1.png"
             alt="Felipe Bueno, Desenvolvedor"
@@ -22,7 +22,7 @@ export default function Home() {
           />
         </div>
         
-        <div className="w-[45%] flex flex-col items-center self-center px-4">
+        <div className="w-[48%] flex flex-col items-center self-center px-4">
           <AnimatedText
             text="Construindo soluções web de ponta a ponta."
             className="!text-6xl !text-left"

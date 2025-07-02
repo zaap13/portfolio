@@ -32,8 +32,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          <main className="flex items-center text-dark w-full min-h-screen">
-            {children}
+          <main>
+            <div className="w-full max-w-[1440px] mx-auto px-8 mt-32">
+              {children}
+            </div>
           </main>
           <Footer />
         </ThemeProvider>
