@@ -1,15 +1,16 @@
-// app/layout.tsx (Versão de Diagnóstico Final)
-
-import NavBar from "@/components/layout/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google"; // Apenas Montserrat é importada
 import { ThemeProvider } from "@/components/theme-provider";
-import Footer from "@/components/layout/Footer";
+import NavBar from "@/components/layout/NavBar";
 
-const inter = Inter({ subsets: ["latin"] });
+// Carregamos a Montserrat e definimos a variável CSS
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-mont",
+});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Felipe Bueno - Desenvolvedor Full-Stack",
   description: "Portfólio para apresentação de projetos e habilidades.",
 };
@@ -21,20 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
-      <body className={`${inter.className} bg-dark dark:bg-light`}>
-        {/*
-          ALTERAÇÃO PRINCIPAL AQUI:
-          - Removemos 'defaultTheme="dark"'
-          - Adicionamos 'enableSystem={false}'
-        */}
+      <body
+        className={`${montserrat.className} bg-dark font-mont dark:bg-light`}
+      >
         <ThemeProvider
           attribute="class"
-          enableSystem={false} // Força o tema a ser controlado apenas pelo site
+          enableSystem={false}
           disableTransitionOnChange
         >
           <NavBar />
-          <main>{children}</main>
-          <Footer />
+          <main className="p-8 sm:p-16 lg:p-32">{children}</main>
         </ThemeProvider>
       </body>
     </html>

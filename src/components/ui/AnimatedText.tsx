@@ -1,7 +1,6 @@
 'use client'
-// 1. IMPORTAÇÃO ATUALIZADA: Trazemos o tipo 'Key' do React
 import { motion, Variants, MotionProps } from "framer-motion";
-import { HTMLAttributes, Key } from "react";
+import { HTMLAttributes } from "react";
 
 type AnimatedTextProps = {
   text: string;
@@ -10,8 +9,8 @@ type AnimatedTextProps = {
 
 // Tipos combinados para resolver os problemas de tipagem
 type CombinedH1Props = MotionProps & HTMLAttributes<HTMLHeadingElement>;
-// 2. A CORREÇÃO FINAL: Adicionamos o tipo da 'key' à nossa união
-type CombinedSpanProps = MotionProps & HTMLAttributes<HTMLSpanElement> & { key: Key };
+// 1. CORREÇÃO: Removemos a necessidade da 'key' deste tipo, pois ela será passada diretamente.
+type CombinedSpanProps = MotionProps & HTMLAttributes<HTMLSpanElement>;
 
 
 // Variantes de animação
@@ -45,15 +44,15 @@ const AnimatedText = ({ text, className = "" }: AnimatedTextProps) => {
     <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
       <motion.h1 {...h1Props}>
         {text.split(" ").map((word, index) => {
-          // Agora o objeto spanProps corresponde 100% ao nosso tipo
+          // 2. CORREÇÃO: A 'key' não está mais dentro deste objeto.
           const spanProps: CombinedSpanProps = {
-            key: word + "-" + index,
             className: "inline-block",
             variants: singleWord,
           };
 
           return (
-            <motion.span {...spanProps}>
+            // 3. CORREÇÃO: A 'key' é passada diretamente para o componente, antes do spread.
+            <motion.span key={word + "-" + index} {...spanProps}>
               {word}&nbsp;
             </motion.span>
           );
