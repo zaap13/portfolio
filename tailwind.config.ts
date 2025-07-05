@@ -19,8 +19,16 @@ module.exports = {
         primary: "#58E6D9",
         primaryDark: "#B63E96",
       },
+
       animation: {
         "spin-slow": "spin 8s linear infinite",
+        "gradient-animation": "gradient-animation 4s ease infinite",
+      },
+      keyframes: {
+        "gradient-animation": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       backgroundImage: {
         circularLight:

@@ -1,18 +1,13 @@
 const Biography = () => {
   return (
-    // 1. CORREÇÃO PRINCIPAL: A cor do texto de todo o container agora reage ao tema.
     <div className="flex flex-col items-start justify-start text-light dark:text-dark">
       
-      {/*
-        2. CORREÇÃO SECUNDÁRIA: O subtítulo também reage ao tema, mantendo a opacidade.
-      */}
+      
       <h2 className="mb-4 text-lg font-bold uppercase text-light/75 dark:text-dark/75">
         Biografia
       </h2>
       
-      {/* Os parágrafos não precisam de alteração, pois eles herdam a cor
-        do container principal que já corrigimos.
-      */}
+      
       <p className="font-medium">
         Com uma paixão pela inovação e soluções criativas, iniciei minha
         jornada no desenvolvimento de software enquanto cursava

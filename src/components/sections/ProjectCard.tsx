@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "../ui/Icons";
 import ImageSlider from "../ui/ImageSlider";
+import ProjectFrame from "../ui/ProjectFrame";
 
 type ProjectProps = {
   type: string;
@@ -13,39 +14,30 @@ type ProjectProps = {
 
 const ProjectCard = ({ type, title, images, link, github }: ProjectProps) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl 
-                       border border-solid border-light dark:border-dark 
-                       bg-dark dark:bg-light 
-                       p-6 relative text-light dark:text-dark"
-    >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl
-                     bg-light dark:bg-dark 
-                     md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" 
-      />
-      
-      <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
-        <div className="aspect-video w-full h-full">
-          <ImageSlider images={images} alt={title} />
-        </div>
-      </Link>
-      
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base">{type}</span>
-        
-        <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">{title}</h2>
+    <ProjectFrame>
+      <div className="w-full flex flex-col items-center justify-center">
+        <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
+          <div className="aspect-[4/3] w-full h-full">
+            <ImageSlider images={images} alt={title} />
+          </div>
         </Link>
-        
-        <div className="w-full mt-2 flex items-center justify-between">
-          <Link href={link} target="_blank" className="text-lg font-semibold underline md:text-base">
-            Visitar
+
+        <div className="w-full flex flex-col items-start justify-between mt-4">
+          <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base">{type}</span>
+          <Link href={link} target="_blank" className="hover:underline underline-offset-2">
+            <h2 className="my-2 w-full text-left text-3xl font-bold text-light dark:text-dark lg:text-2xl">{title}</h2>
           </Link>
-          <Link href={github} target="_blank" className="w-8 md:w-6">
-            <GithubIcon />
-          </Link>
+          <div className="w-full mt-2 flex items-center justify-between">
+            <Link href={link} target="_blank" className="text-lg font-semibold underline text-light dark:text-dark md:text-base">
+              Visitar
+            </Link>
+            <Link href={github} target="_blank" className="w-8 md:w-6 text-light dark:text-dark">
+              <GithubIcon />
+            </Link>
+          </div>
         </div>
       </div>
-    </article>
+    </ProjectFrame>
   );
 };
 

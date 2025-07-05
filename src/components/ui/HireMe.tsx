@@ -6,8 +6,6 @@ const HireMe = () => {
   return (
     <div className="fixed left-4 bottom-4 flex items-center justify-center overflow-hidden">
       <div className="w-48 h-auto flex items-center justify-center relative">
-        {/* 1. CORREÇÃO: A cor de preenchimento (fill) do SVG agora reage ao tema.
-        */}
         <CircularText className="animate-spin-slow fill-light dark:fill-dark" />
         
         <Link

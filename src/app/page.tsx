@@ -1,4 +1,3 @@
-// app/page.tsx (Versão CORRIGIDA e Reativa ao Tema)
 
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +7,6 @@ import { LinkArrow } from "@/components/ui/Icons";
 
 export default function Home() {
   return (
-    // ALTERAÇÃO 1: A cor do texto da seção agora reage ao tema
     <section className="flex flex-col items-center text-light dark:text-dark w-full min-h-screen">
       <div className="flex items-center justify-between w-full">
         <div className="w-[52%] mr-8">
@@ -42,7 +40,6 @@ export default function Home() {
             <a
               href="/Felipe Bueno - Currículo.pdf"
               target="_blank"
-              // ALTERAÇÃO 2: O botão de CV agora reage ao tema e ao hover em ambos os temas
               className="flex items-center
                         bg-light text-dark p-2.5 px-6 rounded-lg text-xl font-bold
                         border-2 border-solid border-transparent 
@@ -55,7 +52,6 @@ export default function Home() {
             >
               CV <LinkArrow className="w-6 ml-1" />
             </a>
-            {/* ALTERAÇÃO 3: O link de Contato agora reage ao tema */}
             <Link
               href="mailto:felipebueno2201@gmail.com"
               target="_blank"

@@ -1,9 +1,7 @@
 "use client";
-// 1. IMPORTAÇÕES ATUALIZADAS: Trazemos os tipos que vamos precisar.
 import { motion, MotionProps } from "framer-motion";
 import { HTMLAttributes } from "react";
 
-// 2. TIPAGEM: Criamos os tipos para as props e para os elementos de animação.
 type SkillProps = {
   name: string;
   x: string;
@@ -12,18 +10,14 @@ type SkillProps = {
 
 type CombinedDivProps = MotionProps & HTMLAttributes<HTMLDivElement>;
 
-// ==================== SUBCOMPONENTE SKILL ====================
 const Skill = ({ name, x, y }: SkillProps) => {
 
-  // 3. PADRÃO DE CORREÇÃO: Agrupamos as props em um objeto tipado.
   const skillDivProps: CombinedDivProps = {
     className: `
       flex items-center justify-center rounded-full font-semibold cursor-pointer absolute
       py-3 px-6 shadow-dark
-      // Cores reativas ao tema para os balões de skill
       bg-light text-dark
       dark:bg-dark dark:text-light
-      // Efeito de hover reativo ao tema
       hover:bg-dark hover:text-light
       dark:hover:bg-light dark:hover:text-dark
     `,
@@ -37,16 +31,12 @@ const Skill = ({ name, x, y }: SkillProps) => {
   return <motion.div {...skillDivProps}>{name}</motion.div>;
 };
 
-// ==================== COMPONENTE PRINCIPAL SKILLS ====================
 const Skills = () => {
-  // Objeto de props para o balão central "web"
   const webSkillProps: CombinedDivProps = {
     className: `
       flex items-center justify-center rounded-full font-semibold p-8 shadow-dark cursor-pointer
-      // Cores reativas ao tema para o balão central
       bg-light text-dark
       dark:bg-dark dark:text-light
-      // Efeito de hover reativo ao tema
       hover:bg-dark hover:text-light
       dark:hover:bg-light dark:hover:text-dark
     `,
@@ -55,17 +45,14 @@ const Skills = () => {
 
   return (
     <>
-      {/* 4. CORREÇÃO DE COR: Título "Skills" */}
       <h2 className="font-bold text-8xl mt-32 w-full text-center text-light dark:text-dark">
         Skills
       </h2>
 
-      {/* 5. CORREÇÃO DE COR: Fundo circular (agora só aparece no tema escuro) */}
       <div className="w-full h-screen relative flex items-center justify-center rounded-full dark:bg-circularLight">
 
         <motion.div {...webSkillProps}>web</motion.div>
 
-        {/* Os componentes Skill já foram corrigidos e vão funcionar corretamente */}
         <Skill name="HTML" x="-22vw" y="0vw" />
         <Skill name="CSS" x="-10vw" y="13vw" />
         <Skill name="Javascript" x="20vw" y="6vw" />

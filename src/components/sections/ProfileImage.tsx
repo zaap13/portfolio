@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Frame from "../ui/Frame"; // Importamos nosso novo componente!
+import Frame from "../ui/Frame"; 
 
 const ProfileImage = () => {
   return (
-    // Usamos o componente Frame e passamos as classes de layout para ele.
     <Frame>
-      {/* O conteúdo dentro do Frame é simplesmente a imagem. */}
       <Image
         src="/images/profile/developer-pic-2.jpeg"
         alt="Felipe Bueno, Desenvolvedor"

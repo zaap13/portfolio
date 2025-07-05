@@ -5,9 +5,7 @@ const StatItem = ({ value, label }: { value: number, label: string }) => (
         <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
             <AnimatedNumbers value={value} />+
         </span>
-        {/*
-          1. CORREÇÃO: A cor do texto do label agora reage ao tema.
-        */}
+        
         <h2 className="text-xl font-medium capitalize text-light/75 dark:text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
             {label}
         </h2>

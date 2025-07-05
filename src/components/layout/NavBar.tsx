@@ -2,14 +2,12 @@
 import Link, { LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 import { GithubIcon, LinkedInIcon } from "@/components/ui/Icons";
-// 1. IMPORTAÇÃO CORRIGIDA: Trocamos HTMLAttributes por AnchorHTMLAttributes.
 import { motion, useScroll, useMotionValueEvent, MotionProps, Variants } from "framer-motion";
 import { HTMLAttributes, useState, AnchorHTMLAttributes } from "react";
 import Logo from "../ui/Logo";
 import { ThemeToggleButton } from "../theme-toggle-button";
 
 type CombinedHeaderProps = MotionProps & HTMLAttributes<HTMLElement>;
-// 2. TIPO CORRIGIDO: Usamos o tipo específico para links (<a>).
 type CombinedLinkProps = MotionProps & LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 const CustomLink = ({ href, title, className = "" }: { href: string, title: string, className?: string }) => {
