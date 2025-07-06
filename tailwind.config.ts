@@ -34,6 +34,9 @@ module.exports = {
         circularLight:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 2px, #1b1b1b 5px, #1b1b1b 100px);",
       },
+      gridTemplateColumns: {
+        "15": "repeat(15, minmax(0, 1fr))",
+      },
     },
   },
   plugins: [],

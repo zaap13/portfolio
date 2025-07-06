@@ -40,7 +40,7 @@ const Frame = ({ children, className = "" }: FrameProps) => {
     onMouseMove: handleMouseMove,
     onMouseLeave: handleMouseLeave,
     style: { transformStyle: "preserve-3d", perspective: "1000px" },
-    className: `relative h-full w-full rounded-2xl group ${className}`,
+    className: `relative w-full rounded-2xl group ${className}`,
   };
 
   const auroraProps: CombinedDivProps = {
