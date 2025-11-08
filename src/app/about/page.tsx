@@ -6,6 +6,7 @@ import ProfileImage from "@/components/sections/ProfileImage";
 import StatsColumn from "@/components/sections/StatsColumn"; // Corrigi o .tsx aqui
 import { getGitHubCommits } from "@/lib/github";
 import { getWakatimeHours } from "@/lib/wakatime";
+import Experience from "@/components/sections/Experience";
 
 export const metadata: Metadata = {
   title: "Sobre | Felipe Bueno",
@@ -47,6 +48,7 @@ export default async function AboutPage() {
       </div>
 
       <Skills />
+      <Experience />
     </>
   );
 }
