@@ -6,6 +6,8 @@
     "node": ">=22 <23"
   },
   "scripts": {
+    "media:index": "node scripts/generate-media-index.js",
+    "prebuild": "node scripts/generate-media-index.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
