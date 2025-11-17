@@ -1,9 +1,18 @@
+import { cookies } from "next/headers";
+import PasswordGate from "@/components/PasswordGate";
 import { listAudioFromPublicMedia } from "@/lib/listAudio";
 import AudioPlayer from "@/components/AudioPlayer";
 
-export const runtime = "nodejs"; // precisamos de fs no servidor
+export const runtime = "nodejs";
 
 export default async function PlayerPage() {
+  const cookieStore = await cookies(); // ✅ em Next 15, cookies() pode ser assíncrono
+  const authed = cookieStore.get("player_auth")?.value === "1";
+
+  if (!authed) {
+    return <PasswordGate />;
+  }
+
   const tracks = await listAudioFromPublicMedia();
 
   return (
@@ -11,7 +20,7 @@ export default async function PlayerPage() {
       <AudioPlayer tracks={tracks} />
       {tracks.length === 0 && (
         <p className="mt-6 text-center opacity-70">
-          Nenhuma música encontrada. Coloque seus arquivos em <code>/public/media</code>.
+          Nenhuma música encontrada. Coloque os arquivos em <code>/public/media</code>.
         </p>
       )}
     </main>
